@@ -75,7 +75,7 @@ void DRV8833::drive(int controlValue, int maxPWM, int rampTime, boolean brake, b
         digitalWrite(_pin2, LOW);
       }
     }
-    else { // Brake mode (slow decay) ->OK
+    else { // Brake mode (slow decay)
       if (_controlValueRamp >= _maxNeutral) { // Forward
         digitalWrite(_pin2, HIGH);
         analogWrite(_pin1, 255 - map(_controlValueRamp, _maxNeutral, _maxInput, 0, _maxPWM));
