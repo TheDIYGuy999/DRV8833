@@ -23,7 +23,7 @@ class DRV8833 {
     int _minNeutral;
     int _maxNeutral;
     int _controlValue;
-    int _controlValueRamp = 50;
+    int _controlValueRamp;
     int _maxPWM;
     int _rampTime;
     boolean _brake;

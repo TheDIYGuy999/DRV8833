@@ -19,6 +19,7 @@ DRV8833::DRV8833(int pin1, int pin2, int minInput, int maxInput, int neutralWidt
   _maxInput = maxInput;
   _minNeutral = (_maxInput + _minInput) / 2 - (neutralWidth / 2);
   _maxNeutral = (_maxInput + _minInput) / 2 + (neutralWidth / 2);
+  _controlValueRamp = (_minNeutral + _maxNeutral) / 2;
   _invert = invert;
   _doublePWM = doublePWM;
   _state = 0;
